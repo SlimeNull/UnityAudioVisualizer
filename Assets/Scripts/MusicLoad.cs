@@ -40,9 +40,9 @@ public class MusicLoad : MonoBehaviour
             musicPlay.SwitchMusic(clip);
         }
     }
-    public void LoadMusic(Text pathText)
+    public void LoadMusic(InputField inputField)
     {
-        string path = pathText.text.Replace('\\', '/');
+        string path = inputField.text.Replace('\\', '/');
         Uri uri = new Uri(path);
 
         Debug.Log($"LoadMusic: {path}");
